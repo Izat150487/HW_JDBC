@@ -3,7 +3,7 @@ package com.peaksoft.model;
 public class City {
     private int id;
     private String name;
-    private int peopleId;
+    private int mayorId;
     private int countryId;
 
     public int getId() {
@@ -22,12 +22,12 @@ public class City {
         this.name = name;
     }
 
-    public int getPeopleId() {
-        return peopleId;
+    public int getMayorId() {
+        return mayorId;
     }
 
-    public void setPeopleId(int peopleId) {
-        this.peopleId = peopleId;
+    public void setMayorId(int mayorId) {
+        this.mayorId = mayorId;
     }
 
     public int getCountryId() {
@@ -43,7 +43,7 @@ public class City {
         return "City{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", peopleId=" + peopleId +
+                ", mayorId=" + mayorId +
                 ", countryId=" + countryId +
                 '}';
     }

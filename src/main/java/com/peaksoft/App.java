@@ -1,41 +1,44 @@
 package com.peaksoft;
 
+import java.sql.SQLException;
+
 import static com.peaksoft.db.DataBase.*;
 
 /**
  * Hello world!
  */
 public class App {
-    public static void main( String[] args ) {
+    public static void main( String[] args ) throws SQLException {
 
-//        createTableCites();
-//        createTableCountry();
-//        createTableMayor();
+       createTableCities();
+        createTableCountry();
+        createTableMayor();
         // MAYOR TABLE
-//        insertTableMayor(1,"Алмаз Мамбетов ",50,"MAYOR");
-//        insertTableMayor(2,"Айбек Джунушалиев ",55,"MAYOR");
-//        insertTableMayor(3,"Нурбек Молдокадыров",53,"MAYOR");
-//        insertTableMayor(4,"Имамназар Бурканов",52,"MAYOR");
-//        insertTableMayor(5,"Азамат Арнабек уулу",60,"MAYOR");
+        insertTableMayor(1,"Altai Kulginov", 53, "Mayor");
+        insertTableMayor(2,"Almaz Mambetov", 46, "Mayor");
+        insertTableMayor(3,"Aibek Djunushaliev", 52, "Mayor");
+        insertTableMayor(4,"Akbar Shukurov", 38, "Mayor");
+        insertTableMayor(5,"Johongir Abidovich", 47, "Mayor");
 
 
         //county
-//        insertCountryTable(1,"Kyrgyzstan");
-//        insertCountryTable(2,"Kazakhstan");
-//        insertCountryTable(3,"Uzbekistan");
-//        insertCountryTable(4,"Russian");
-//        insertCountryTable(5,"USA");
-        //cities
-//        insertCityTable(1,"Karakol");
-//        insertCityTable(2,"Bishkek");
-//        insertCityTable(3,"Naryn");
-//        insertCityTable(4,"Batken");
-//        insertCityTable(5,"Talas");
+        insertCountryTable(1,"Kyrgyzstan",1);
+        insertCountryTable(2,"Uzbekistan",2);
+        insertCountryTable(3,"Kazakhstan",1);
 
-        //getAllCountry
-        // getAllCountry();
+        //cities
+        insertCityTable(1,"Osh",2,1);
+        insertCityTable(2,"Astana",1,3);
+        insertCityTable(3,"Bishkek",3,1);
+        insertCityTable(4,"Samarqand",4,2);
+        insertCityTable(5,"Tashkent",5,2);
+
+        getAllMayors();
+        getAllCountry();
+        getAllCity();
 
         //CallById city
-        //System.out.println(callByIdCities(1));
+
+        System.out.println(callByIdCities(3));
     }
 }
